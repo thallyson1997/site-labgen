@@ -229,103 +229,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-.signup-section {
-  padding: 0 0 clamp(2.8rem, 7vw, 5rem);
-}
-
-.signup-section h2 {
-  margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  color: var(--ink-900);
-}
-
-.signup-section > p {
-  margin: 0.7rem 0 1.4rem;
-  color: var(--ink-700);
-  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
-}
-
-.signup-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
-  background: #ffffff;
-  border: 1px solid #d5def5;
-  border-radius: 14px;
-  padding: clamp(1rem, 2.4vw, 1.4rem);
-  box-shadow: 0 10px 18px rgba(1, 13, 65, 0.08);
-}
-
-.signup-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  color: var(--ink-900);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.signup-form input,
-.signup-form select,
-.signup-form textarea {
-  width: 100%;
-  border: 1px solid #c9d5f3;
-  border-radius: 10px;
-  padding: 0.65rem 0.7rem;
-  font: inherit;
-  color: var(--ink-900);
-  background: #ffffff;
-}
-
-.signup-form input:focus,
-.signup-form select:focus,
-.signup-form textarea:focus {
-  outline: 2px solid rgba(214, 67, 33, 0.25);
-  border-color: var(--brand);
-}
-
-.signup-form .full-width {
-  grid-column: 1 / -1;
-}
-
-.signup-form button {
-  grid-column: 1 / -1;
-  justify-self: start;
-  border: none;
-  border-radius: 10px;
-  padding: 0.72rem 1.2rem;
-  background: var(--brand);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.signup-form button:hover {
-  transform: translateY(-2px);
-  filter: brightness(0.95);
-}
-
-.form-status {
-  grid-column: 1 / -1;
-  margin: 0;
-  min-height: 1.35rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.form-status.is-loading {
-  color: var(--ink-700);
-}
-
-.form-status.is-success {
-  color: #1a7f37;
-}
-
-.form-status.is-error {
-  color: #b42318;
-}
 
 .org-section {
   padding: 0 0 clamp(2.8rem, 7vw, 5rem);
@@ -485,10 +388,6 @@ body {
   }
 
   .org-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .signup-form {
     grid-template-columns: 1fr;
   }
 
