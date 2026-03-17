@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscricao | Curso de Ferias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav container" aria-label="Menu principal">
+      <a class="brand" href="../index.html" aria-label="Inicio">
+        <img src="../assets/img/placeholder.png" alt="Logo Labgen" />
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="../index.html#programacao">PROGRAMACAO</a></li>
+        <li><a href="../index.html#organizacao">ORGANIZACAO</a></li>
+        <li><a href="../index.html#contato">CONTATO</a></li>
+        <li><a href="../index.html#">LOCAL</a></li>
+        <li><a href="../index.html#">CERTIFICADO</a></li>
+        <li><a class="nav-cta" href="inscricao.html" aria-current="page">INSCREVA-SE JA!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="inscricao-page container">
+      <h1>Formulário de Inscrição</h1>
+      <p>O Curso de Férias Labgen oferece <strong>20 vagas por módulo</strong>. Siga os passos abaixo para garantir a sua.</p>
+
+      <!-- Passo 1: Pagamento -->
+      <div class="pix-card">
+        <span class="pix-step-badge">Passo 1</span>
+        <h2>Realize o pagamento via PIX</h2>
+        <p class="pix-desc">Guarde o comprovante — você deverá anexá-lo no formulário abaixo.</p>
+        <div class="pix-box">
+          <img src="../assets/img/qrcode-pix.png" alt="QR Code para pagamento via PIX" class="pix-qrcode" />
+          <div class="pix-key-block">
+            <p>Ou use a chave PIX:</p>
+            <div class="pix-key-row">
+              <code id="pix-key-value">CHAVE-PIX-AQUI</code>
+              <button type="button" id="copy-pix-btn" class="copy-pix-btn">Copiar</button>
+            </div>
+            <p id="pix-copy-status" class="pix-copy-status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 2: Formulário -->
+      <p class="form-step-intro"><strong>Passo 2 —</strong> Preencha o formulário e anexe o comprovante de pagamento.</p>
+
+      <form id="inscricao-form" class="inscricao-form" novalidate>
+        <label>
+          Nome completo *
+          <input type="text" name="nome" required />
+        </label>
+
+        <label>
+          Número de telefone *
+          <input type="tel" name="telefone" required />
+        </label>
+
+        <label>
+          Email *
+          <input type="email" name="email" required />
+        </label>
+
+        <fieldset class="modulos-fieldset full-width">
+          <legend>Selecionar módulo * <span class="legend-hint">(escolha apenas 1)</span></legend>
+          <label class="check-item">
+            <input type="radio" name="modulo" value="1" required />
+            Módulo 1
+          </label>
+          <label class="check-item">
+            <input type="radio" name="modulo" value="2" />
+            Módulo 2
+          </label>
+          <label class="check-item">
+            <input type="radio" name="modulo" value="3" />
+            Módulo 3
+          </label>
+        </fieldset>
+
+        <label class="file-label full-width">
+          Comprovante de pagamento *
+          <span class="file-hint">JPG, PNG ou PDF — máximo 5 MB</span>
+          <input type="file" name="comprovante" accept="image/jpeg,image/png,application/pdf" required />
+        </label>
+
+        <button type="submit">Enviar inscrição</button>
+        <p id="inscricao-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
