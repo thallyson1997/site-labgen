@@ -18,6 +18,12 @@ export default async function handler(req, res) {
     });
   }
 
+  if (SUPABASE_SERVICE_ROLE_KEY.startsWith("sb_publishable_")) {
+    return sendJson(res, 500, {
+      error: "SUPABASE_SERVICE_ROLE_KEY esta usando uma chave publishable. Configure a chave secreta sb_secret no Vercel."
+    });
+  }
+
   try {
     const {
       nome,
@@ -41,6 +47,11 @@ export default async function handler(req, res) {
     if (moduloId < 1 || moduloId > 3) {
       return sendJson(res, 400, { error: "Modulo invalido." });
     }
+
+    console.log("Processando inscricao", {
+      moduloId,
+      supabaseHost: SUPABASE_URL
+    });
 
     // Converte base64 para buffer
     const buffer = Buffer.from(comprovanteBase64, "base64");
