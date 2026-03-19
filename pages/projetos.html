@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos | Labgen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .projects-section {
+      padding: 3rem 0;
+    }
+
+    .projects-section h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    .project-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #3498db;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content {
+      flex: 1;
+    }
+
+    .project-content h3 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .project-content p {
+      color: #7f8c8d;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .project-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 768px) {
+      .project-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .project-item:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .project-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .projects-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav container" aria-label="Menu principal">
+      <a class="brand" href="../index.html" aria-label="Inicio">
+        <img src="../assets/img/placeholder.png" alt="Logo Labgen" />
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="../index.html#contato">CONTATO</a></li>
+        <li><a href="projetos.html" aria-current="page">PROJETOS</a></li>
+        <li><a href="publicacoes.html">PUBLICAÇÕES</a></li>
+        <li><a class="nav-cta" href="curso_de_ferias.html">CURSO DE FERIAS, EM BREVE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-section container">
+      <h1>Projetos</h1>
+
+      <div class="project-item">
+        <div class="project-image">
+          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+        </div>
+        <div class="project-content">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-image">
+          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+        </div>
+        <div class="project-content">
+          <h3>Lorem Ipsum Sit Amet</h3>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+            cupidatat non proident, sunt in culpa qui officia deserunt 
+            mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-image">
+          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+        </div>
+        <div class="project-content">
+          <h3>Lorem Ipsum Consectetur</h3>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+            quae ab illo inventore veritatis et quasi architecto beatae 
+            vitae dicta sunt explicabo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Labgen. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Férias | Labgen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .curso-hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .curso-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .curso-hero p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .inscricao-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(45deg, #e74c3c, #c0392b);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+    }
+
+    .inscricao-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(231, 76, 60, 0.4);
+      background: linear-gradient(45deg, #c0392b, #a93226);
+    }
+
+    .inscricao-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .program-section {
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .curso-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .inscricao-btn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+      }
+
+      .program-section {
+        margin-top: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav container" aria-label="Menu principal">
+      <a class="brand" href="../index.html" aria-label="Inicio">
+        <img src="../assets/img/placeholder.png" alt="Logo Labgen" />
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="../index.html#contato">CONTATO</a></li>
+        <li><a href="projetos.html">PROJETOS</a></li>
+        <li><a href="publicacoes.html">PUBLICAÇÕES</a></li>
+        <li><a class="nav-cta" href="curso_de_ferias.html" aria-current="page">CURSO DE FERIAS, EM BREVE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="curso-hero">
+      <h1>Curso de Férias</h1>
+      <p>
+        Uma oportunidade única de aprendizado intensivo durante as férias. 
+        Desenvolva suas habilidades e conhecimentos com nosso programa especializado.
+        Vagas limitadas - não perca essa chance!
+      </p>
+      <a href="inscricao.html" class="inscricao-btn">
+        INSCREVA-SE AQUI
+      </a>
+    </section>
+
+    <section class="program-section container">
+      <h2>Programacao</h2>
+      <p>Materiais em PDF para download.</p>
+
+      <div class="program-grid">
+        <a class="program-item" href="../assets/pdf/modulo-1.pdf" download>
+          <span class="program-title">Modulo 1</span>
+          <span class="program-subtitle">Baixar PDF</span>
+        </a>
+
+        <a class="program-item" href="../assets/pdf/modulo-2.pdf" download>
+          <span class="program-title">Modulo 2</span>
+          <span class="program-subtitle">Baixar PDF</span>
+        </a>
+
+        <a class="program-item" href="../assets/pdf/modulo-3.pdf" download>
+          <span class="program-title">Modulo 3</span>
+          <span class="program-subtitle">Baixar PDF</span>
+        </a>
+
+        <a class="program-item" href="../assets/pdf/guia-do-participante.pdf" download>
+          <span class="program-title">Guia do participante</span>
+          <span class="program-subtitle">Baixar PDF</span>
+        </a>
+
+        <a class="program-item" href="../assets/pdf/apresentacoes-orais.pdf" download>
+          <span class="program-title">Apresentacoes orais</span>
+          <span class="program-subtitle">Baixar PDF</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="org-section container">
+      <h2>Organizacao</h2>
+      <p>Docentes coordenadores do curso.</p>
+
+      <div class="org-grid">
+        <article class="org-card">
+          <img src="../assets/img/placeholder.png" alt="Coordenador 1" />
+          <h3>Prof. Dr. Lorem Ipsum Dolor</h3>
+        </article>
+
+        <article class="org-card">
+          <img src="../assets/img/placeholder.png" alt="Coordenador 2" />
+          <h3>Profa. Dra. Lorem Ipsum Sit</h3>
+        </article>
+
+        <article class="org-card">
+          <img src="../assets/img/placeholder.png" alt="Coordenador 3" />
+          <h3>Prof. Dr. Lorem Ipsum Amet</h3>
+        </article>
+      </div>
+
+      <div class="org-support">
+        <h4>Outros organizadores</h4>
+        <ul>
+          <li>Lorem ipsum dolor (Lorem ipsum)</li>
+          <li>Lorem ipsum sit amet (Lorem ipsum)</li>
+          <li>Lorem ipsum consectetur (Lorem ipsum)</li>
+          <li>Lorem ipsum adipiscing (Lorem ipsum)</li>
+          <li>Lorem ipsum tempor (Lorem ipsum)</li>
+          <li>Lorem ipsum labore (Lorem ipsum)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-sponsors container">
+      <div class="footer-columns">
+        <div class="footer-block">
+          <h3>Organizacao</h3>
+          <div class="logos-grid">
+            <div class="logo-item">
+              <img src="../assets/img/placeholder.png" alt="Logo organizacao 1" />
+            </div>
+            <div class="logo-item">
+              <img src="../assets/img/placeholder.png" alt="Logo organizacao 2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-block">
+          <h3>Apoio</h3>
+          <div class="logos-grid">
+            <div class="logo-item">
+              <img src="../assets/img/placeholder.png" alt="Logo apoio 1" />
+            </div>
+            <div class="logo-item">
+              <img src="../assets/img/placeholder.png" alt="Logo apoio 2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Labgen. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicações | Labgen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .publications-section {
+      padding: 3rem 0;
+    }
+
+    .publications-section h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: #010d41;
+    }
+
+    .publication-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 15px;
+      border-left: 5px solid #d64321;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .publication-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 15px 35px rgba(214, 67, 33, 0.15);
+    }
+
+    .publication-image {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #d64321;
+      box-shadow: 0 8px 20px rgba(214, 67, 33, 0.2);
+    }
+
+    .publication-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .publication-content {
+      flex: 1;
+    }
+
+    .publication-content h3 {
+      font-size: 1.5rem;
+      color: #010d41;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .publication-content p {
+      color: #24336b;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .publication-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .publication-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .publications-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="top-nav container" aria-label="Menu principal">
+      <a class="brand" href="../index.html" aria-label="Inicio">
+        <img src="../assets/img/placeholder.png" alt="Logo Labgen" />
+      </a>
+
+      <ul class="nav-list">
+        <li><a href="../index.html#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="../index.html#contato">CONTATO</a></li>
+        <li><a href="projetos.html">PROJETOS</a></li>
+        <li><a href="publicacoes.html" aria-current="page">PUBLICAÇÕES</a></li>
+        <li><a class="nav-cta" href="curso_de_ferias.html">CURSO DE FERIAS, EM BREVE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="publications-section container">
+      <h1>Publicações</h1>
+
+      <div class="publication-item">
+        <div class="publication-image">
+          <img src="../assets/img/placeholder.png" alt="Publicação Lorem Ipsum" />
+        </div>
+        <div class="publication-content">
+          <h3>Lorem Ipsum Dolor Sit</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="publication-image">
+          <img src="../assets/img/placeholder.png" alt="Publicação Lorem Ipsum" />
+        </div>
+        <div class="publication-content">
+          <h3>Lorem Ipsum Consectetur</h3>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+            cupidatat non proident, sunt in culpa qui officia deserunt 
+            mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="publication-image">
+          <img src="../assets/img/placeholder.png" alt="Publicação Lorem Ipsum" />
+        </div>
+        <div class="publication-content">
+          <h3>Lorem Ipsum Adipiscing</h3>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+            quae ab illo inventore veritatis et quasi architecto beatae 
+            vitae dicta sunt explicabo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Labgen. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
