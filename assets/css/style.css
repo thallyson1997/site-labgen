@@ -34,6 +34,110 @@ body {
   margin: 0 auto;
 }
 
+.section-with-deco {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.14;
+  filter: saturate(1.15) drop-shadow(0 12px 20px rgba(1, 13, 65, 0.1));
+}
+
+.about-section .section-deco {
+  opacity: 0.09;
+}
+
+.team-section .section-deco,
+.contact-section .section-deco {
+  opacity: 0.13;
+}
+
+.deco-dna {
+  width: clamp(120px, 16vw, 240px);
+}
+
+.deco-chromo {
+  width: clamp(100px, 13vw, 200px);
+}
+
+.about-deco-dna {
+  right: -28px;
+  top: 10px;
+  transform: rotate(-12deg);
+}
+
+.about-deco-chromo {
+  left: 8px;
+  bottom: 10px;
+  transform: rotate(15deg);
+}
+
+.team-deco-dna {
+  left: -26px;
+  top: 54px;
+  transform: rotate(10deg);
+}
+
+.team-deco-chromo {
+  right: -26px;
+  top: 46px;
+  transform: rotate(-11deg);
+}
+
+.team-deco-dna-2 {
+  right: 24%;
+  bottom: 26px;
+  transform: rotate(-22deg);
+}
+
+.team-deco-chromo-2 {
+  left: 18%;
+  top: 10px;
+  transform: rotate(23deg);
+}
+
+.contact-deco-dna {
+  right: -24px;
+  bottom: 12px;
+  transform: rotate(-16deg);
+}
+
+.contact-deco-chromo {
+  left: -12px;
+  top: 20px;
+  transform: rotate(20deg);
+}
+
+.section-title-with-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+}
+
+.section-title-with-icon img {
+  width: clamp(24px, 2.2vw, 34px);
+  height: auto;
+  flex: 0 0 auto;
+  opacity: 0.9;
+}
+
+.section-title-with-icon img[src*="DNA.png"] {
+  transform: rotate(-45deg) scale(1.35);
+  transform-origin: center;
+}
+
+.section-title-centered {
+  display: flex;
+  justify-content: center;
+}
+
 #quem-somos,
 #programacao,
 #organizacao,
@@ -66,8 +170,8 @@ body {
 }
 
 .brand img {
-  width: 350px;
-  height: 100px;
+  width: 260px;
+  height: 74px;
   object-fit: cover;
   background: var(--surface);
 }
@@ -230,6 +334,8 @@ body {
 }
 
 .about-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(1.2rem, 3vw, 2.5rem);
@@ -428,6 +534,8 @@ body {
 }
 
 .contact-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.8rem, 2vw, 1.2rem);
@@ -840,6 +948,13 @@ body {
 }
 
 .team-docentes,
+.team-discentes,
+.docente-modal {
+  position: relative;
+  z-index: 1;
+}
+
+.team-docentes,
 .team-discentes {
   margin-bottom: clamp(3rem, 5vw, 4rem);
 }
@@ -1056,6 +1171,32 @@ body {
 
 /* ── Responsive Design ─────────────────────────────── */
 @media (max-width: 800px) {
+  .section-deco {
+    opacity: 0.1;
+  }
+
+  .about-deco-dna,
+  .team-deco-chromo,
+  .team-deco-chromo-2,
+  .contact-deco-dna {
+    right: -52px;
+  }
+
+  .about-deco-chromo,
+  .team-deco-dna,
+  .team-deco-dna-2,
+  .contact-deco-chromo {
+    left: -52px;
+  }
+
+  .section-title-with-icon {
+    gap: 0.45rem;
+  }
+
+  .section-title-with-icon img {
+    width: 24px;
+  }
+
   .docentes-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1144,6 +1285,10 @@ body {
 }
 
 @media (max-width: 520px) {
+  .section-deco {
+    display: none;
+  }
+
   .docentes-container,
   .discentes-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

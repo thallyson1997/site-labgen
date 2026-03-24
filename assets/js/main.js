@@ -153,6 +153,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeBtn = modal?.querySelector(".close");
   const docenteBtns = document.querySelectorAll(".docente-btn");
 
+  if (modal && modal.parentElement !== document.body) {
+    document.body.appendChild(modal);
+  }
+
   // Dados dos docentes (em uma aplicação real, viria de uma API)
   const docentesData = {
     1: {
@@ -198,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("modal-titulo").textContent = docente.titulo;
     document.getElementById("modal-descricao").textContent = docente.descricao;
 
-    modal.style.display = "block";
+    modal.style.display = "grid";
     document.body.style.overflow = "hidden"; // Prevent background scroll
   }
 
@@ -237,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Fechar modal com tecla ESC
   document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape" && modal?.style.display === "block") {
+    if (event.key === "Escape" && modal && modal.style.display !== "none" && modal.style.display !== "") {
       closeModal();
     }
   });
