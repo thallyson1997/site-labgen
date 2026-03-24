@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Ferias | Labgen</title>
+  <title>LabGeM | UFMA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -13,11 +13,12 @@
   <header class="site-header">
     <nav class="top-nav container" aria-label="Menu principal">
       <a class="brand" href="#" aria-label="Inicio">
-        <img src="assets/img/placeholder.png" alt="Logo Labgen" />
+        <img src="assets/img/LOGO.png" alt="Logo LabGeM" />
       </a>
 
       <ul class="nav-list">
         <li><a href="#quem-somos">QUEM SOMOS</a></li>
+        <li><a href="#membros">MEMBROS</a></li>
         <li><a href="#contato">CONTATO</a></li>
         <li><a href="pages/projetos.html">PROJETOS</a></li>
         <li><a href="pages/publicacoes.html">PUBLICAÇÕES</a></li>
@@ -60,8 +61,120 @@
         </div>
 
         <figure class="about-logo-placeholder">
-          <img src="assets/img/placeholder.png" alt="Logo do curso" />
+          <img src="assets/img/LOGO.png" alt="Logo LabGeM" />
         </figure>
+      </div>
+    </section>
+
+    <section id="membros" class="team-section container">
+      <h2>MEMBROS DA LabGeM</h2>
+
+      <div class="team-docentes">
+        <h3>Docentes</h3>
+        <div class="docentes-container">
+          <!-- Primeira linha: 3 professores -->
+          <div class="docentes-row">
+            <div class="docente-card" data-docente="1">
+              <img src="assets/img/DOCENTE_01.jpeg" alt="Leonardo Teixeira Dall'Agnol" />
+              <h4>Leonardo Teixeira Dall'Agnol</h4>
+              <p class="docente-titulo">Professor Adjunto da UFMA</p>
+              <button class="docente-btn">Ler mais</button>
+            </div>
+
+            <div class="docente-card" data-docente="2">
+              <img src="assets/img/DOCENTE_02.jpeg" alt="Silma Regina Ferreira Pereira Jasper" />
+              <h4>Silma Regina Ferreira Pereira Jasper</h4>
+              <p class="docente-titulo">Professora Titular da UFMA</p>
+              <button class="docente-btn">Ler mais</button>
+            </div>
+
+            <div class="docente-card" data-docente="3">
+              <img src="assets/img/DOCENTE_03.jpeg" alt="Hivana Barbosa Dall'Agnol" />
+              <h4>Hivana Barbosa Dall'Agnol</h4>
+              <p class="docente-titulo">Professora Adjunta - Depto. Patologia</p>
+              <button class="docente-btn">Ler mais</button>
+            </div>
+          </div>
+
+          <!-- Segunda linha: 2 professores -->
+          <div class="docentes-row">
+            <div class="docente-card" data-docente="4">
+              <img src="assets/img/DOCENTE_04.jpeg" alt="Silvio Gomes Monteiro" />
+              <h4>Silvio Gomes Monteiro</h4>
+              <p class="docente-titulo">Professor Titular - Depto. Biologia</p>
+              <button class="docente-btn">Ler mais</button>
+            </div>
+
+            <div class="docente-card" data-docente="5">
+              <img src="assets/img/DOCENTE_05.jpeg" alt="Mayara Ingrid Sousa Lima" />
+              <h4>Mayara Ingrid Sousa Lima</h4>
+              <p class="docente-titulo">Professora Adjunta - Depto. Biologia</p>
+              <button class="docente-btn">Ler mais</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal para expandir informações do docente -->
+        <div id="docente-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+              <img id="modal-foto" src="" alt="" />
+              <div class="modal-text">
+                <h3 id="modal-nome"></h3>
+                <p id="modal-titulo"></p>
+                <div id="modal-descricao"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-discentes">
+        <h3>Discentes</h3>
+        <div class="discentes-grid">
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Lorem Ipsum" />
+            <h4>Lorem Ipsum</h4>
+            <p class="discente-nivel">Doutorando</p>
+            <p class="discente-curso">Lorem Ipsum</p>
+          </div>
+
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Dolor Sit" />
+            <h4>Dolor Sit</h4>
+            <p class="discente-nivel">Mestrando</p>
+            <p class="discente-curso">Lorem Dolor</p>
+          </div>
+
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Consectetur Elit" />
+            <h4>Consectetur Elit</h4>
+            <p class="discente-nivel">Bacharelando</p>
+            <p class="discente-curso">Consectetur Lorem</p>
+          </div>
+
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Tempor Magna" />
+            <h4>Tempor Magna</h4>
+            <p class="discente-nivel">Bacharelando</p>
+            <p class="discente-curso">Tempor Aliqua</p>
+          </div>
+
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Sed Veniam" />
+            <h4>Sed Veniam</h4>
+            <p class="discente-nivel">Mestranda</p>
+            <p class="discente-curso">Sed Lorem</p>
+          </div>
+
+          <div class="discente-card">
+            <img src="assets/img/placeholder.png" alt="Quis Nostrud" />
+            <h4>Quis Nostrud</h4>
+            <p class="discente-nivel">Doutorando</p>
+            <p class="discente-curso">Quis Lorem</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -89,12 +202,12 @@
         <article class="contact-card">
           <h3>Localizacao</h3>
           <p>
-            Av. dos portugueses, 1966 - Vila Bacanga,<br />
-            São Luís - MA; 65065-545<br />
-            Universidade Federal do Maranhão<br />
+            Lorem ipsum dolor sit amet<br />
+            Consectetur adipiscing elit<br />
+            Lorem Ipsum - LI; 00000-000<br />
             <br />
-            1º Andar - Prédio da Biologia<br />
-            Laboratório de Genética e Biologia Molecular
+            Lorem ipsum dolor sit amet<br />
+            Consectetur adipiscing elit sed do eiusmod
           </p>
         </article>
       </div>
@@ -103,7 +216,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Labgen. Todos os direitos reservados.</p>
+      <p>&copy; 2026 LabGeM. Todos os direitos reservados.</p>
     </div>
   </footer>
 

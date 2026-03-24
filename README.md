@@ -1,4 +1,4 @@
-# Site Labgen
+# Site LabGeM
 
 Site para inscrições em cursos com formulário e API.
 

@@ -147,3 +147,99 @@ if (form && statusBox) {
   });
 }
 
+// ── Modal de Docentes ──────────────────────────────────
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("docente-modal");
+  const closeBtn = modal?.querySelector(".close");
+  const docenteBtns = document.querySelectorAll(".docente-btn");
+
+  // Dados dos docentes (em uma aplicação real, viria de uma API)
+  const docentesData = {
+    1: {
+      nome: "Leonardo Teixeira Dall'Agnol",
+      titulo: "Professor Adjunto da UFMA",
+      foto: "assets/img/DOCENTE_01.jpeg",
+      descricao: "Professor Adjunto da UFMA, líder do GB3 e LabGeM, docente dos programas de pós-graduação PPGSA e PPGCTAmb. Doutor em Química Sustentável pela Universidade Nova de Lisboa (bolsa Marie Curie, 2013), com pós-doutorado em biotecnologia de cianobactérias (UFPA). Pesquisa biodiversidade microbiana, bioinformática, liquens e ciência cidadã. Coordenador do curso de Ciências Biológicas, presidente do MCAA Brazil Chapter e membro do International Science Council."
+    },
+    2: {
+      nome: "Silma Regina Ferreira Pereira Jasper",
+      titulo: "Professora Titular da UFMA",
+      foto: "assets/img/DOCENTE_02.jpeg",
+      descricao: "Professora Titular da UFMA, pós-doutorada em Genética Molecular de Câncer pela Georgetown University (EUA), com graduação, mestrado e doutorado em Genética. Pesquisadora em citogenética-molecular humana, oncogenética e mutagênese, bolsista FAPEMA e membro do INCT-TeraNano."
+    },
+    3: {
+      nome: "Hivana Barbosa Dall'Agnol",
+      titulo: "Professora Adjunta - Depto. Patologia",
+      foto: "assets/img/DOCENTE_03.jpeg",
+      descricao: "Professora Adjunta do Departamento de Patologia da UFMA, doutora em Genética e Biologia Molecular (UFPA, 2012), com mestrado em Patologia das Doenças Tropicais (2006) e graduação em Biomedicina (2004). Pós-doutorado em Bioquímica de Proteínas Microbianas na Universidade Nova de Lisboa (2012-2013). Ministra Microbiologia para cursos de Ciências Biológicas e da Saúde, atuando também em programas de pós-graduação e especialização. Pesquisa em biologia molecular, genômica e transcriptômica microbiana, com passagem como pesquisadora no Instituto Tecnológico Vale."
+    },
+    4: {
+      nome: "Silvio Gomes Monteiro",
+      titulo: "Professor Titular - Depto. Biologia",
+      foto: "assets/img/DOCENTE_04.jpeg",
+      descricao: "Professor Titular do Departamento de Biologia da UFMA e docente permanente do PPGCS, com doutorado (1997) e mestrado (1992) em Genética pela FMRP-USP e graduação em Ciências Biológicas (UFMA, 1988). Pesquisador em genética de populações, saúde coletiva e epidemiologia ambiental, com foco em ISTs/AIDS e doenças infecto-parasitárias em populações de risco e comunidades quilombolas do Maranhão. Prêmio FAPEMA Sérgio Ferretti 2018 (Pesquisador Sênior), consultor ad hoc da FAPEMA, revisor da Biosciences Journal e ex-coordenador do Ciências Sem Fronteiras UFMA/Coimbra."
+    },
+    5: {
+      nome: "Mayara Ingrid Sousa Lima",
+      titulo: "Professora Adjunta - Depto. Biologia",
+      foto: "assets/img/DOCENTE_05.jpeg",
+      descricao: "Professora Adjunta do Departamento de Biologia da UFMA, doutora em Genética e Bioquímica (UFU, 2015), com mestrado em Biotecnologia (FIOCRUZ, 2011), graduação em Ciências Biológicas (UFMA, 2008) e pós-doutorado em Genômica Populacional Microbiana na Universidade de York (2020). Coordena o grupo BioGen/LabGeM-UFMA e é docente permanente dos programas de pós-graduação PPGCS e PPGSA. Pesquisa biotecnologia e genética molecular aplicadas à saúde, com ênfase em biomarcadores e diagnóstico de hanseníase e leishmaniose, além de estudos genômicos sobre susceptibilidade e resistência medicamentosa em Leishmania."
+    }
+  };
+
+  // Função para abrir modal
+  function openModal(docenteId) {
+    const docente = docentesData[docenteId];
+    if (!docente || !modal) return;
+
+    document.getElementById("modal-foto").src = docente.foto;
+    document.getElementById("modal-foto").alt = docente.nome;
+    document.getElementById("modal-nome").textContent = docente.nome;
+    document.getElementById("modal-titulo").textContent = docente.titulo;
+    document.getElementById("modal-descricao").textContent = docente.descricao;
+
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent background scroll
+  }
+
+  // Função para fechar modal
+  function closeModal() {
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Restore scroll
+    }
+  }
+
+  // Event listeners
+  docenteBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const docenteCard = this.closest(".docente-card");
+      const docenteId = docenteCard?.getAttribute("data-docente");
+      if (docenteId) {
+        openModal(docenteId);
+      }
+    });
+  });
+
+  // Fechar modal ao clicar no X
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeModal);
+  }
+
+  // Fechar modal ao clicar fora dele
+  if (modal) {
+    modal.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  // Fechar modal com tecla ESC
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && modal?.style.display === "block") {
+      closeModal();
+    }
+  });
+});
+
