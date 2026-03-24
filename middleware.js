@@ -1,5 +1,5 @@
 export const config = {
-  matcher: ["/pages/inscricao.html", "/api/inscricoes"]
+  matcher: ["/pages/curso_de_ferias.html", "/pages/inscricao.html", "/api/inscricoes"]
 };
 
 function unauthorizedResponse() {
