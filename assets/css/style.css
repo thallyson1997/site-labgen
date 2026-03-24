@@ -1056,33 +1056,75 @@ body {
 
 /* ── Responsive Design ─────────────────────────────── */
 @media (max-width: 800px) {
+  .docentes-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    width: 100%;
+  }
+
   .docentes-row {
-    justify-content: center;
-    gap: clamp(1rem, 2vw, 1.5rem);
-    flex-wrap: wrap;
+    display: contents;
   }
 
   .docente-card {
-    min-width: 280px;
-    max-width: 320px;
-    padding: 2rem 1.5rem;
+    min-width: 0;
+    max-width: none;
+    padding: 1.1rem 0.85rem;
+    width: 100%;
+    flex: initial;
   }
 
   .docente-card img {
-    width: 150px;
-    height: 150px;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 0.9rem;
   }
 
   .docente-card h4 {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.25;
+    margin-bottom: 0.45rem;
   }
 
   .docente-titulo {
-    font-size: 1rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .docente-btn {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.76rem;
+    width: 100%;
   }
 
   .discentes-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .discente-card {
+    padding: 0.8rem 0.65rem;
+  }
+
+  .discente-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.6rem;
+  }
+
+  .discente-card h4 {
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+
+  .discente-nivel {
+    font-size: 0.78rem;
+  }
+
+  .discente-curso {
+    font-size: 0.74rem;
   }
 
   .modal-content {
@@ -1098,5 +1140,12 @@ body {
 
   .modal-body img {
     align-self: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .docentes-container,
+  .discentes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
