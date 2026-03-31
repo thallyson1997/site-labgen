@@ -1,3 +1,40 @@
+// --- Carrossel manual ---
+document.addEventListener('DOMContentLoaded', function () {
+  // Carrossel automático apenas com CSS (sem JS manual)
+});
+// --- Notificação de Em Construção ---
+function showEmConstrucao() {
+  // Remove notificação antiga se existir
+  const old = document.getElementById('em-construcao-toast');
+  if (old) old.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'em-construcao-toast';
+  toast.textContent = 'Em construção...';
+  toast.className = 'em-construcao-toast';
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('show');
+  }, 10);
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 400);
+  }, 2600);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Bloqueia links do menu para Projetos e Publicações
+  const navLinks = document.querySelectorAll('.nav-list a[href$="projetos.html"], .nav-list a[href$="publicacoes.html"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      showEmConstrucao();
+    });
+    link.setAttribute('aria-disabled', 'true');
+    link.style.cursor = 'not-allowed';
+  });
+});
 const copyBtn = document.getElementById("copy-pix-btn");
 const pixKeyEl = document.getElementById("pix-key-value");
 const pixCopyStatus = document.getElementById("pix-copy-status");
