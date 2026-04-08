@@ -1,6 +1,45 @@
-// --- Carrossel manual ---
+// --- Carrossel automático + manual ---
 document.addEventListener('DOMContentLoaded', function () {
-  // Carrossel automático apenas com CSS (sem JS manual)
+  const carousel = document.getElementById('carousel');
+  if (!carousel) return;
+
+  const imgs = Array.from(carousel.querySelectorAll('.carousel-img'));
+  const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+  let current = 0;
+  let timer = null;
+
+  function goTo(index) {
+    imgs[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + imgs.length) % imgs.length;
+    imgs[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function startTimer() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  document.getElementById('carousel-next').addEventListener('click', () => {
+    goTo(current + 1);
+    startTimer();
+  });
+
+  document.getElementById('carousel-prev').addEventListener('click', () => {
+    goTo(current - 1);
+    startTimer();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goTo(i);
+      startTimer();
+    });
+  });
+
+  goTo(0);
+  startTimer();
 });
 // --- Notificação de Em Construção ---
 function showEmConstrucao() {
