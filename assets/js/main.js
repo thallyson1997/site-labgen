@@ -63,6 +63,27 @@ function showEmConstrucao() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Menu hamburguer mobile
+  const navToggle = document.getElementById('nav-toggle');
+  const navList = document.getElementById('nav-list');
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    // Fecha o menu ao clicar em um link
+    navList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
   // Bloqueia links do menu para Projetos e Publicações
   const navLinks = document.querySelectorAll('.nav-list a[href$="projetos.html"], .nav-list a[href$="publicacoes.html"]');
   navLinks.forEach(link => {
