@@ -586,6 +586,42 @@ body {
   text-align: center;
 }
 
+.localizacao-section {
+  padding: clamp(2.6rem, 6vw, 5rem) 0;
+}
+
+.localizacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(1.2rem, 3vw, 2.5rem);
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.localizacao-info {
+  position: relative;
+  z-index: 1;
+}
+
+.localizacao-info p {
+  margin: 0 0 0.6rem;
+  color: var(--ink-700);
+  line-height: 1.7;
+}
+
+.localizacao-info strong {
+  color: var(--ink-900);
+  font-size: 1.05rem;
+}
+
+.localizacao-mapa {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(1, 13, 65, 0.13);
+  position: relative;
+  z-index: 1;
+}
+
 .contact-section {
   padding: 0 0 clamp(2.8rem, 7vw, 5rem);
 }
@@ -951,6 +987,10 @@ body {
 
 @media (max-width: 800px) {
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .localizacao-grid {
     grid-template-columns: 1fr;
   }
 
