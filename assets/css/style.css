@@ -431,6 +431,7 @@ body {
   color: var(--ink-700);
   font-size: clamp(1rem, 1.5vw, 1.12rem);
   line-height: 1.65;
+  text-align: justify;
 }
 
 .about-logo-placeholder {
@@ -607,6 +608,7 @@ body {
   margin: 0 0 0.6rem;
   color: var(--ink-700);
   line-height: 1.7;
+  text-align: justify;
 }
 
 .localizacao-info strong {
