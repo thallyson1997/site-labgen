@@ -10,87 +10,102 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
-    .projects-section {
-      padding: 3rem 0;
+    .page-section {
+      padding: 3rem 0 5rem;
     }
 
-    .projects-section h1 {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.5rem;
-      color: #2c3e50;
+    .docente-block {
+      background: #fff;
+      border-radius: 18px;
+      border: 1.5px solid #dbe3f7;
+      box-shadow: 0 4px 24px rgba(1, 13, 65, 0.07);
+      margin-bottom: 2.8rem;
+      overflow: hidden;
     }
 
-    .project-item {
+    .docente-header {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background: #f8f9fa;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      gap: 1.8rem;
+      padding: 1.8rem 2rem;
+      background: linear-gradient(90deg, #010d41 0%, #1a2a7a 100%);
     }
 
-    .project-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-image {
+    .docente-photo {
       flex-shrink: 0;
-      width: 150px;
-      height: 150px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       overflow: hidden;
-      border: 4px solid #3498db;
+      border: 3px solid #d64321;
+      box-shadow: 0 4px 14px rgba(214, 67, 33, 0.35);
     }
 
-    .project-image img {
+    .docente-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .project-content {
-      flex: 1;
+    .docente-info h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
 
-    .project-content h3 {
-      font-size: 1.5rem;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      font-weight: 700;
+    .docente-info p {
+      font-size: 0.95rem;
+      color: #a8b8e8;
+      margin: 0;
+      font-weight: 600;
     }
 
-    .project-content p {
-      color: #7f8c8d;
+    .projetos-list {
+      list-style: none;
+      margin: 0;
+      padding: 1.4rem 2rem 1.8rem;
+    }
+
+    .projetos-list li {
+      border-bottom: 1px solid #edf0f9;
+      padding: 1.1rem 0;
+    }
+
+    .projetos-list li:last-child {
+      border-bottom: none;
+    }
+
+    .item-titulo {
+      display: block;
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #010d41;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.35rem;
+    }
+
+    .item-desc {
+      font-size: 0.95rem;
+      color: #4a5580;
       line-height: 1.6;
-      font-size: 1rem;
+      text-transform: uppercase;
+      margin: 0;
     }
 
-    .project-item:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    @media (max-width: 768px) {
-      .project-item {
+    @media (max-width: 600px) {
+      .docente-header {
         flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.4rem 1.2rem;
       }
 
-      .project-item:nth-child(even) {
-        flex-direction: column;
-      }
-
-      .project-image {
-        width: 120px;
-        height: 120px;
-      }
-
-      .projects-section h1 {
-        font-size: 2rem;
+      .projetos-list {
+        padding: 1rem 1.2rem 1.4rem;
       }
     }
   </style>
@@ -120,56 +135,139 @@
   </header>
 
   <main>
-    <section class="projects-section container">
+    <section class="page-section container">
       <h1 class="section-title-with-icon section-title-centered">
         <img src="../assets/img/Cromossomos.png" alt="" aria-hidden="true" />
-        Projetos
+        PROJETOS
       </h1>
 
-      <div class="project-item">
-        <div class="project-image">
-          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+      <!-- Leonardo Teixeira Dall'Agnol -->
+      <div class="docente-block">
+        <div class="docente-header">
+          <div class="docente-photo">
+            <img src="https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_01.jpeg" alt="Leonardo Teixeira Dall'Agnol" />
+          </div>
+          <div class="docente-info">
+            <h2>Leonardo Teixeira Dall'Agnol</h2>
+            <p>Professor Adjunto da UFMA</p>
+          </div>
         </div>
-        <div class="project-content">
-          <h3>Lorem Ipsum Dolor</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
+        <ul class="projetos-list">
+          <li>
+            <span class="item-titulo">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING</span>
+            <p class="item-desc">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM UT ENIM AD MINIM VENIAM QUIS NOSTRUD</span>
+            <p class="item-desc">UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM DUIS AUTE IRURE DOLOR IN REPREHENDERIT</span>
+            <p class="item-desc">DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR.</p>
+          </li>
+        </ul>
       </div>
 
-      <div class="project-item">
-        <div class="project-image">
-          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+      <!-- Silma Regina Ferreira Pereira Jasper -->
+      <div class="docente-block">
+        <div class="docente-header">
+          <div class="docente-photo">
+            <img src="https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_02.jpeg" alt="Silma Regina Ferreira Pereira Jasper" />
+          </div>
+          <div class="docente-info">
+            <h2>Silma Regina Ferreira Pereira Jasper</h2>
+            <p>Professora Titular da UFMA</p>
+          </div>
         </div>
-        <div class="project-content">
-          <h3>Lorem Ipsum Sit Amet</h3>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-            cupidatat non proident, sunt in culpa qui officia deserunt 
-            mollit anim id est laborum.
-          </p>
-        </div>
+        <ul class="projetos-list">
+          <li>
+            <span class="item-titulo">LOREM IPSUM EXCEPTEUR SINT OCCAECAT CUPIDATAT NON PROIDENT</span>
+            <p class="item-desc">EXCEPTEUR SINT OCCAECAT CUPIDATAT NON PROIDENT, SUNT IN CULPA QUI OFFICIA DESERUNT MOLLIT ANIM ID EST LABORUM.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS</span>
+            <p class="item-desc">SED UT PERSPICIATIS UNDE OMNIS ISTE NATUS ERROR SIT VOLUPTATEM ACCUSANTIUM DOLOREMQUE LAUDANTIUM, TOTAM REM APERIAM.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM NEMO ENIM IPSAM VOLUPTATEM QUIA VOLUPTAS</span>
+            <p class="item-desc">NEMO ENIM IPSAM VOLUPTATEM QUIA VOLUPTAS SIT ASPERNATUR AUT ODIT AUT FUGIT, SED QUIA CONSEQUUNTUR MAGNI DOLORES.</p>
+          </li>
+        </ul>
       </div>
 
-      <div class="project-item">
-        <div class="project-image">
-          <img src="../assets/img/placeholder.png" alt="Projeto Lorem Ipsum" />
+      <!-- Hivana Barbosa Dall'Agnol -->
+      <div class="docente-block">
+        <div class="docente-header">
+          <div class="docente-photo">
+            <img src="https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_03.jpeg" alt="Hivana Barbosa Dall'Agnol" />
+          </div>
+          <div class="docente-info">
+            <h2>Hivana Barbosa Dall'Agnol</h2>
+            <p>Professora Adjunta — Depto. Patologia</p>
+          </div>
         </div>
-        <div class="project-content">
-          <h3>Lorem Ipsum Consectetur</h3>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
-            quae ab illo inventore veritatis et quasi architecto beatae 
-            vitae dicta sunt explicabo.
-          </p>
-        </div>
+        <ul class="projetos-list">
+          <li>
+            <span class="item-titulo">LOREM IPSUM NEQUE PORRO QUISQUAM EST QUI DOLOREM</span>
+            <p class="item-desc">NEQUE PORRO QUISQUAM EST, QUI DOLOREM IPSUM QUIA DOLOR SIT AMET, CONSECTETUR, ADIPISCI VELIT.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM UT LABORE ET DOLORE MAGNAM ALIQUAM QUAERAT</span>
+            <p class="item-desc">UT LABORE ET DOLORE MAGNAM ALIQUAM QUAERAT VOLUPTATEM. AT VERO EOS ET ACCUSAMUS ET IUSTO ODIO DIGNISSIMOS.</p>
+          </li>
+        </ul>
       </div>
+
+      <!-- Silvio Gomes Monteiro -->
+      <div class="docente-block">
+        <div class="docente-header">
+          <div class="docente-photo">
+            <img src="https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_04.jpeg" alt="Silvio Gomes Monteiro" />
+          </div>
+          <div class="docente-info">
+            <h2>Silvio Gomes Monteiro</h2>
+            <p>Professor Titular — Depto. Biologia</p>
+          </div>
+        </div>
+        <ul class="projetos-list">
+          <li>
+            <span class="item-titulo">LOREM IPSUM NAM LIBERO TEMPORE CUM SOLUTA NOBIS ELIGENDI</span>
+            <p class="item-desc">NAM LIBERO TEMPORE, CUM SOLUTA NOBIS EST ELIGENDI OPTIO CUMQUE NIHIL IMPEDIT QUO MINUS ID QUOD MAXIME PLACEAT.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM TEMPORIBUS AUTEM QUIBUSDAM ET AUT OFFICIIS</span>
+            <p class="item-desc">TEMPORIBUS AUTEM QUIBUSDAM ET AUT OFFICIIS DEBITIS EST RERUM NECESSITATIBUS SAEPE EVENIET UT ET VOLUPTATES.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM ITAQUE EARUM RERUM HIC TENETUR A SAPIENTE</span>
+            <p class="item-desc">ITAQUE EARUM RERUM HIC TENETUR A SAPIENTE DELECTUS, UT AUT REICIENDIS VOLUPTATIBUS MAIORES ALIAS CONSEQUATUR.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mayara Ingrid Sousa Lima -->
+      <div class="docente-block">
+        <div class="docente-header">
+          <div class="docente-photo">
+            <img src="https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_05.jpeg" alt="Mayara Ingrid Sousa Lima" />
+          </div>
+          <div class="docente-info">
+            <h2>Mayara Ingrid Sousa Lima</h2>
+            <p>Professora Adjunta — Depto. Biologia</p>
+          </div>
+        </div>
+        <ul class="projetos-list">
+          <li>
+            <span class="item-titulo">LOREM IPSUM QUI DOLOREM IPSUM QUIA VOLUPTAS SIT ASPERNATUR</span>
+            <p class="item-desc">QUI DOLOREM IPSUM QUIA VOLUPTAS SIT ASPERNATUR AUT ODIT AUT FUGIT, SED QUIA CONSEQUUNTUR MAGNI DOLORES EOS.</p>
+          </li>
+          <li>
+            <span class="item-titulo">LOREM IPSUM QUIS AUTEM VEL EUM IURE REPREHENDERIT</span>
+            <p class="item-desc">QUIS AUTEM VEL EUM IURE REPREHENDERIT QUI IN EA VOLUPTATE VELIT ESSE QUAM NIHIL MOLESTIAE CONSEQUATUR.</p>
+          </li>
+        </ul>
+      </div>
+
     </section>
   </main>
 
