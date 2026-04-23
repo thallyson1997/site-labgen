@@ -263,24 +263,18 @@ document.addEventListener("DOMContentLoaded", function() {
       descricao: "Professor Adjunto da UFMA, líder do GB3 e LabGeM, docente dos programas de pós-graduação PPGSA e PPGCTAmb. Doutor em Química Sustentável pela Universidade Nova de Lisboa (bolsa Marie Curie, 2013), com pós-doutorado em biotecnologia de cianobactérias (UFPA). Pesquisa biodiversidade microbiana, bioinformática, liquens e ciência cidadã. Coordenador do curso de Ciências Biológicas, presidente do MCAA Brazil Chapter e membro do International Science Council."
     },
     2: {
-      nome: "Silma Regina Ferreira Pereira Jasper",
-      titulo: "Professora Titular da UFMA",
-      foto: "https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_02.jpeg",
-      descricao: "Professora Titular da UFMA, pós-doutorada em Genética Molecular de Câncer pela Georgetown University (EUA), com graduação, mestrado e doutorado em Genética. Pesquisadora em citogenética-molecular humana, oncogenética e mutagênese, bolsista FAPEMA e membro do INCT-TeraNano."
-    },
-    3: {
       nome: "Hivana Barbosa Dall'Agnol",
       titulo: "Professora Adjunta - Depto. Patologia",
       foto: "https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_03.jpeg",
       descricao: "Professora Adjunta do Departamento de Patologia da UFMA, doutora em Genética e Biologia Molecular (UFPA, 2012), com mestrado em Patologia das Doenças Tropicais (2006) e graduação em Biomedicina (2004). Pós-doutorado em Bioquímica de Proteínas Microbianas na Universidade Nova de Lisboa (2012-2013). Ministra Microbiologia para cursos de Ciências Biológicas e da Saúde, atuando também em programas de pós-graduação e especialização. Pesquisa em biologia molecular, genômica e transcriptômica microbiana, com passagem como pesquisadora no Instituto Tecnológico Vale."
     },
-    4: {
+    3: {
       nome: "Silvio Gomes Monteiro",
       titulo: "Professor Titular - Depto. Biologia",
       foto: "https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_04.jpeg",
       descricao: "Professor Titular do Departamento de Biologia da UFMA e docente permanente do PPGCS, com doutorado (1997) e mestrado (1992) em Genética pela FMRP-USP e graduação em Ciências Biológicas (UFMA, 1988). Pesquisador em genética de populações, saúde coletiva e epidemiologia ambiental, com foco em ISTs/AIDS e doenças infecto-parasitárias em populações de risco e comunidades quilombolas do Maranhão. Prêmio FAPEMA Sérgio Ferretti 2018 (Pesquisador Sênior), consultor ad hoc da FAPEMA, revisor da Biosciences Journal e ex-coordenador do Ciências Sem Fronteiras UFMA/Coimbra."
     },
-    5: {
+    4: {
       nome: "Mayara Ingrid Sousa Lima",
       titulo: "Professora Adjunta - Depto. Biologia",
       foto: "https://vnfwisvznpohrelernpi.supabase.co/storage/v1/object/public/docentes%20e%20dicentes/DOCENTE_05.jpeg",
